@@ -170,8 +170,8 @@
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
 
                         <div class="bg-blue-500 text-white p-4">
-  Esto es un componente de prueba con TailwindCss no funciona taildwid.
-</div>
+                            Esto es un componente de prueba con TailwindCss.
+                        </div>
                     </footer>
                 </div>
             </div>
