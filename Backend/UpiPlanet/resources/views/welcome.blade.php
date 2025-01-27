@@ -1427,6 +1427,10 @@
 
                     <div class="p-4 text-white bg-blue-500">
                         Esto es un componente de prueba con TailwindCss3.
+
+                        @livewireStyles
+                        <livewire:counter />
+                        @livewireScripts
                     </div>
                 </footer>
             </div>
