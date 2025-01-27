@@ -1,7 +1,34 @@
 <div>
-    <h1>{{ $count }}</h1>
 
-    <button wire:click="increment">+</button>
+    <div class="max-w-6xl px-4 py-8 mx-auto">
+        <div
+            class="relative p-8 overflow-hidden text-white shadow-2xl bg-gradient-to-r from-gray-800 to-gray-600 rounded-xl">
+            <div class="absolute top-0 left-0 w-full h-full transform -skew-x-12 bg-white opacity-10"></div>
+            <div class="relative z-10">
+                <svg class="w-12 h-12 mb-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <p class="mb-4 text-xl font-medium">
+                    "This product exceeded all my expectations. It's intuitive, powerful, and has dramatically
+                    improved
+                    my workflow.
+                    I can't imagine working without it now!"</p>
+                <h1>{{ $count }}</h1>
 
-    <button wire:click="decrement">-</button>
+                <button wire:click="increment">+</button>
+
+                <button wire:click="decrement">-</button>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Avatar"
+                        class="w-12 h-12 mr-4 border-2 border-black rounded-full">
+                    <div>
+                        <h4 class="font-semibold">Sarah Johnson</h4>
+                        <p class="text-black">UX Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

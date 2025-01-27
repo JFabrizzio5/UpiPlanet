@@ -9,7 +9,16 @@
 </head>
 
 @vite(['resources/css/app.css', 'resources/js/app.js'])
+<style>
+    .transparent-section {
+        .transparent-section {
+            background-color: transparent;
+            /* Fondo completamente transparente */
+        }
 
+        /* Completamente transparente */
+    }
+</style>
 <header class="bg-white shadow-lg dark:bg-gray-800">
     <nav class="container px-6 py-3 mx-auto">
         <div class="flex items-center justify-between">
@@ -30,12 +39,13 @@
     </nav>
 </header>
 
-<body class="min-h-screen text-gray-800 bg-sky-50 dark:text-red">
+<body
+    class="w-full h-64 min-h-screen bg-gradient-to-r from-[rgb(17,24,39)] via-[rgb(88,28,135)] to-[rgb(17,24,39)] dark:text-red">
 
 
     <main class="container px-6 py-8 mx-auto">
-        <h1 class="mb-12 text-4xl font-bold text-center text-gray-800 animate-fade-in">About</h1>
-        <section class="bg-sky-50">
+        <h1 class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">About</h1>
+        <section class=" transparent-section">
 
             <div class="max-w-screen-xl px-2 py-4 mx-auto sm:py-4 lg:px-6">
                 <div class="grid h-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
@@ -85,7 +95,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="flex flex-col h-auto col-span-2 bg-indigo-800 sm:col-span-1 md:col-span-1 md:h-full">
+                    <div class="flex flex-col h-auto col-span-2 sm:col-span-1 md:col-span-1 md:h-full">
                         <a href=""
                             class="relative flex flex-col flex-grow px-4 pt-40 pb-4 overflow-hidden rounded-lg group">
                             <img src="https://images.unsplash.com/photo-1693680501357-a342180f1946?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -101,39 +111,66 @@
             </div>
         </section>
 
-        <div class="max-w-md mx-auto">
-            <div
-                class="relative p-8 overflow-hidden text-white shadow-2xl bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl">
-                <div class="absolute top-0 left-0 w-full h-full transform -skew-x-12 bg-white opacity-10"></div>
-                <div class="relative z-10">
-                    <svg class="w-12 h-12 mb-4 text-purple-300" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                    </svg>
-                    <p class="mb-4 text-xl font-medium">
-                        "This product exceeded all my expectations. It's intuitive, powerful, and has dramatically
-                        improved
-                        my workflow.
-                        I can't imagine working without it now!"</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Avatar"
-                            class="w-12 h-12 mr-4 border-2 border-purple-300 rounded-full">
-                        <div>
-                            <h4 class="font-semibold">Sarah Johnson</h4>
-                            <p class="text-purple-200">UX Designer</p>
+        <div class="max-w-6xl px-4 py-8 mx-auto">
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="relative w-full p-8 overflow-hidden text-white shadow-2xl bg-gradient-to-r from-gray-800 to-gray-600 rounded-xl md:w-1/3">
+                    <div class="absolute top-0 left-0 w-full h-full transform -skew-x-12 bg-white opacity-10"></div>
+                    <div class="relative z-10">
+                        <svg class="w-12 h-12 mb-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                        <p class="mb-4 text-xl font-medium">
+                            "This product exceeded all my expectations. It's intuitive, powerful, and has dramatically
+                            improved
+                            my workflow. I can't imagine working without it now!"
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Avatar"
+                                class="w-12 h-12 mr-4 border-2 border-black rounded-full">
+                            <div>
+                                <h4 class="font-semibold">Sarah Johnson</h4>
+                                <p class="text-black">UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="relative w-full p-8 overflow-hidden text-white shadow-2xl bg-gradient-to-r from-gray-800 to-gray-600 rounded-xl md:w-1/3">
+                    <div class="absolute top-0 left-0 w-full h-full transform -skew-x-12 bg-white opacity-10"></div>
+                    <div class="relative z-10">
+                        <svg class="w-12 h-12 mb-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                        <p class="mb-4 text-xl font-medium">
+                            "This is another example of a card. Modify the content here for your needs!"
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Avatar"
+                                class="w-12 h-12 mr-4 border-2 border-black rounded-full">
+                            <div>
+                                <h4 class="font-semibold">John Doe</h4>
+                                <p class="text-black">Software Engineer</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
         @livewireScripts
-        <main class="container px-6 py-8 mx-auto">
-            @yield('content')
-        </main>
+
+        @yield('content')
+
         @livewireStyles
 
+        <main class="container px-6 py-8 mx-auto">
+        </main>
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div class="p-6 transition-all duration-300 transform bg-white shadow-lg dark:bg-gray-800 rounded-xl hover:scale-105 animate-fade-in"
                 style="animation-delay: 0.1s;">
