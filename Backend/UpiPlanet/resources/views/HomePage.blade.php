@@ -4,7 +4,6 @@
 
 @section('content')
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         .transparent-section {
             .transparent-section {
@@ -88,11 +87,7 @@
                 </div>
             </section>
 
-            @livewireScripts
 
-            @yield('content')
-
-            @livewireStyles
 
 
 
@@ -152,8 +147,7 @@
 
 
 
-            <main class="container px-6 py-8 mx-auto">
-            </main>
+
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <div class="p-6 transition-all duration-300 transform bg-white shadow-lg dark:bg-gray-800 rounded-xl hover:scale-105 animate-fade-in"
                     style="animation-delay: 0.1s;">
@@ -231,11 +225,7 @@
             </div>
         </main>
 
-        <footer class="mt-12 bg-white dark:bg-gray-800">
-            <div class="container px-6 py-4 mx-auto">
-                <p class="text-center text-gray-600 dark:text-gray-400">&copy; 2024 TechSolutions. All rights reserved.</p>
-            </div>
-        </footer>
+
 
         <style>
             @keyframes fadeIn {
