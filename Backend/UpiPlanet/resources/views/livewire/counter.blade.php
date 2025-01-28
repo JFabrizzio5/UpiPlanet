@@ -17,9 +17,9 @@
 
                 <button wire:click="increment">+</button>
 
-                <button wire:click="decrement">-</button> --}}
+                <button wire:click="decrement">-</button> https://randomuser.me/api/portraits/women/91.jpg --}}
                 <div class="flex items-center">
-                    <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Avatar"
+                    <img src="https://avatars.githubusercontent.com/u/115313375?v=4&size=64" alt="Avatar"
                         class="w-12 h-12 mr-4 border-2 border-black rounded-full">
                     <div>
                         <h4 class="font-semibold">Joseph Fabrizzio</h4>
