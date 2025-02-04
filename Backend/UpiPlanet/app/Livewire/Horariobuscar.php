@@ -2,8 +2,11 @@
 
 namespace App\Livewire;
 
+namespace App\Livewire;
+
 use Livewire\Component;
 use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class Horariobuscar extends Component
 {
@@ -23,20 +26,17 @@ class Horariobuscar extends Component
         $this->resetResults();
         $this->isLoading = true;
 
-        // Imprimir las rutas para depuración
+        // Directorios de los PDFs y capturas
         $pdfDir = Storage::disk('public')->path('pdfs');
         $capturasDir = Storage::disk('public')->path('capturas');
 
-        // Verificar y crear directorios si no existen
+        // Verificar y crear los directorios si no existen
         if (!is_dir($pdfDir)) {
-            mkdir($pdfDir, 0775, true);  // Crear pdfs
+            mkdir($pdfDir, 0775, true);
         }
         if (!is_dir($capturasDir)) {
-            mkdir($capturasDir, 0775, true);  // Crear capturas
+            mkdir($capturasDir, 0775, true);
         }
-
-        // Imprimir las rutas y comprobar si existen los archivos
-
 
         try {
             // Comando para ejecutar el script en el entorno virtual
@@ -49,18 +49,13 @@ class Horariobuscar extends Component
                 Storage::disk('public')->path('capturas')
             );
 
-            // Ejecutar el comando usando shell_exec
+            // Ejecutar el comando
             $result = shell_exec($command);
 
-            // Capturar salida
-            //dd($result);
             // Verificar si la ejecución fue exitosa
             if ($result === null) {
                 throw new \Exception("Error procesando el PDF.");
             }
-
-            // Imprimir el resultado del script para depuración
-
 
             // Analizar el resultado
             $resultParts = explode('|', $result);
@@ -88,5 +83,13 @@ class Horariobuscar extends Component
     public function render()
     {
         return view('livewire.horariobuscar');
+    }
+
+    public function downloadPdf()
+    {
+        if ($this->pdfUrl) {
+            return response()->download(Storage::disk('public')->path("pdfs/{$this->texto}.pdf"));
+        }
+        return response()->json(['error' => 'PDF no encontrado'], 404);
     }
 }

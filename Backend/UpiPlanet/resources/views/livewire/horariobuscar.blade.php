@@ -20,38 +20,25 @@
 
     @if ($pdfUrl)
         <div class="mt-3">
-            <button class="btn btn-danger" onclick="descargarPDF('{{ $pdfUrl }}')">
+            <button class="btn btn-danger" wire:click="downloadPdf">
                 <i class="fas fa-file-pdf"></i> Descargar PDF
             </button>
         </div>
+    @elseif ($capturas)
+        <div class="mt-3">
+            <span class="text-xl font-semibold text-gray-700">Resultados:</span>
+            <div class="flex mt-4 space-x-4 overflow-auto">
+                @foreach ($capturas as $captura)
+                    <div class="flex-shrink-0">
+                        <img src="{{ Storage::disk('public')->url($captura) }}"
+                            class="object-contain h-48 border-2 border-gray-300 rounded-lg w-72" alt="Captura">
+                    </div>
+                @endforeach
+            </div>
+        </div>
     @endif
 
-    <div class="mt-3 table-responsive">
-        <table class="table table-striped table-bordered">
-            <tbody>
-                @foreach ($capturas as $captura)
-                    <tr>
-                        <td>
-                            <img src="{{ Storage::disk('public')->url($captura) }}" class="img-fluid" alt="Captura">
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
-
-    <script>
-        function descargarPDF(url) {
-            fetch(url)
-                .then(response => response.blob())
-                .then(blob => {
-                    const link = document.createElement('a');
-                    link.href = URL.createObjectURL(blob);
-                    link.download = 'horario.pdf';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                });
-        }
-    </script>
+    @if (empty($capturas) && !$isLoading)
+        <div class="mt-3 alert alert-warning">No se encontraron resultados.</div>
+    @endif
 </div>
