@@ -21,7 +21,7 @@ class Horariobuscar extends Component
 
     public function buscar()
     {
-        dd("holaaa");
+        //dd("holaaa");
         $this->validate();
         $this->resetResults();
         $this->isLoading = true;
