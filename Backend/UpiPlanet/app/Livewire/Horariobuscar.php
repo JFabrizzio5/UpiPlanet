@@ -3,12 +3,10 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
 
 class Horariobuscar extends Component
 {
-
     public $texto;
     public $capturas = [];
     public $pdfUrl;
@@ -21,32 +19,42 @@ class Horariobuscar extends Component
 
     public function buscar()
     {
-        //dd("holaaa");
         $this->validate();
         $this->resetResults();
         $this->isLoading = true;
 
         try {
-            // Ejecutar script Python
-            $result = Process::run(
-                sprintf(
-                    'python3 %s "%s" "%s" "%s"',
-                    base_path('resources/python/pdf_processor.py'),
-                    $this->texto,
-                    Storage::disk('public')->path('pdfs'),
-                    Storage::disk('public')->path('capturas')
-                )
+            // Comando para ejecutar el script en el entorno virtual
+            $command = sprintf(
+                'source %s/venv/bin/activate && python3 %s "%s" "%s" "%s"',
+                base_path('resources/python'),
+                base_path('resources/python/pdf_processor.py'),
+                $this->texto,
+                Storage::disk('public')->path('pdfs'),
+                Storage::disk('public')->path('capturas')
             );
+
+            // Ejecutar el comando usando shell_exec
+            $result = shell_exec($command);
+
+            // Verificar si la ejecución fue exitosa
+            if ($result === null) {
+                throw new \Exception("Error procesando el PDF.");
+            }
+
+            // Imprimir el resultado del script para depuración
             dd($result);
-            if (!$result->successful()) {
-                throw new \Exception("Error procesando el PDF: " . $result->errorOutput());
+
+            // Analizar el resultado
+            $resultParts = explode('|', $result);
+            if (count($resultParts) < 2) {
+                throw new \Exception("Error procesando el PDF: $result");
             }
 
             // Obtener resultados
             $this->pdfUrl = Storage::disk('public')->url("pdfs/{$this->texto}.pdf");
             $this->capturas = Storage::disk('public')->files("capturas/{$this->texto}");
         } catch (\Exception $e) {
-            dd("fallo");
             $this->error = $e->getMessage();
         }
 
@@ -55,14 +63,13 @@ class Horariobuscar extends Component
 
     private function resetResults()
     {
-        dd("holaaa");
         $this->capturas = [];
         $this->pdfUrl = null;
         $this->error = null;
     }
+
     public function render()
     {
-
         return view('livewire.horariobuscar');
     }
 }
