@@ -59,6 +59,6 @@ class HorarioSearch extends Component
 
     public function render()
     {
-        return view('livewire.horario-search');
+        return view('livewire.horariosearch');
     }
 }
