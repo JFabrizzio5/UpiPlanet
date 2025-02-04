@@ -6,7 +6,7 @@
 @section('content')
 
     </h1>Horario</h1>
-    <livewire:horariosearch />
+    <livewire:horariobuscar />
 
 
 @endsection
