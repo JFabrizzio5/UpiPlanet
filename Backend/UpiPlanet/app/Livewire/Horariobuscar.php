@@ -36,20 +36,12 @@ class Horariobuscar extends Component
         }
 
         // Imprimir las rutas y comprobar si existen los archivos
-        dd([
-            'script_path' => base_path('app/Http/Controllers/PythonControllers/GeneradorDePDF.py'),
-            'pdf_directory' => $pdfDir,
-            'capturas_directory' => $capturasDir,
-            'venv_path' => base_path('app/Http/Controllers/PythonControllers/venv/bin/python3'),
-            'exists_script' => file_exists(base_path('app/Http/Controllers/PythonControllers/GeneradorDePDF.py')),
-            'exists_pdf' => file_exists($pdfDir . '/horarios_periodo_2025_1.pdf'),
-            'exists_capturas' => is_dir($capturasDir)
-        ]);
+
 
         try {
             // Comando para ejecutar el script en el entorno virtual
             $command = sprintf(
-                'source %s/venv/bin/activate && python3 %s/GeneradorDePDF.py "%s" "%s" "%s" 2>&1',
+                'bash -c "source %s/venv/bin/activate && python3 %s/GeneradorDePDF.py "%s" "%s" "%s"" 2>&1',
                 base_path('app/Http/Controllers/PythonControllers'),
                 base_path('app/Http/Controllers/PythonControllers'),
                 $this->texto,
