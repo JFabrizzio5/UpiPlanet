@@ -21,7 +21,7 @@ class Horariobuscar extends Component
 
     public function buscar()
     {
-
+        dd("holaaa");
         $this->validate();
         $this->resetResults();
         $this->isLoading = true;
@@ -37,7 +37,7 @@ class Horariobuscar extends Component
                     Storage::disk('public')->path('capturas')
                 )
             );
-
+            dd($result);
             if (!$result->successful()) {
                 throw new \Exception("Error procesando el PDF: " . $result->errorOutput());
             }
@@ -61,7 +61,7 @@ class Horariobuscar extends Component
     }
     public function render()
     {
-        dd("holaaa");
+
         return view('livewire.horariobuscar');
     }
 }
