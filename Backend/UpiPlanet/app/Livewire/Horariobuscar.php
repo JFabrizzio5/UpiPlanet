@@ -36,14 +36,14 @@ class Horariobuscar extends Component
 
             // Ejecutar el comando usando shell_exec
             $result = shell_exec($command);
-
+            dd($result);
             // Verificar si la ejecución fue exitosa
             if ($result === null) {
                 throw new \Exception("Error procesando el PDF.");
             }
 
             // Imprimir el resultado del script para depuración
-            dd($result);
+
 
             // Analizar el resultado
             $resultParts = explode('|', $result);
