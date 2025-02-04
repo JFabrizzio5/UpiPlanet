@@ -46,6 +46,7 @@ class Horariobuscar extends Component
             $this->pdfUrl = Storage::disk('public')->url("pdfs/{$this->texto}.pdf");
             $this->capturas = Storage::disk('public')->files("capturas/{$this->texto}");
         } catch (\Exception $e) {
+            dd("fallo");
             $this->error = $e->getMessage();
         }
 
