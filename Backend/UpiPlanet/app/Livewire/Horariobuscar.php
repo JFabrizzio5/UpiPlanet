@@ -53,7 +53,7 @@ class Horariobuscar extends Component
             $result = shell_exec($command);
 
             // Capturar salida
-            dd($result);
+            //dd($result);
             // Verificar si la ejecución fue exitosa
             if ($result === null) {
                 throw new \Exception("Error procesando el PDF.");
