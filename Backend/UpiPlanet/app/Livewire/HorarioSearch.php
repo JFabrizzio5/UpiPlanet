@@ -24,6 +24,9 @@ class HorarioSearch extends Component
         $this->resetResults();
         $this->isLoading = true;
 
+        // Depurar salida de la consola
+
+
         try {
             // Ejecutar script Python
             $result = Process::run(
@@ -35,6 +38,13 @@ class HorarioSearch extends Component
                     Storage::disk('public')->path('capturas')
                 )
             );
+
+            dd([
+                'exitCode' => $result->exitCode(),   // Código de salida (0 = éxito)
+                'output' => $result->output(),       // Salida estándar del proceso
+                'error' => $result->errorOutput(),   // Salida de error
+                'successful' => $result->successful() // Booleano: ¿Se ejecutó correctamente?
+            ]);
 
             if (!$result->successful()) {
                 throw new \Exception("Error procesando el PDF: " . $result->errorOutput());
