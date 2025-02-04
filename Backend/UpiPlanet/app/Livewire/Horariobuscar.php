@@ -26,9 +26,9 @@ class Horariobuscar extends Component
         try {
             // Comando para ejecutar el script en el entorno virtual
             $command = sprintf(
-                'source %s/venv/bin/activate && python3 %s/GeneradorDePDF.py "%s" "%s" "%s"',
-                base_path('app/Http/Controllers/PythonControllers'), // Ruta del entorno virtual
-                base_path('app/Http/Controllers/PythonControllers'), // Ruta donde está el script Python
+                'source %s/venv/bin/activate && python3 %s/GeneradorDePDF.py "%s" "%s" "%s" 2>&1',
+                base_path('app/Http/Controllers/PythonControllers'),
+                base_path('app/Http/Controllers/PythonControllers'),
                 $this->texto,
                 Storage::disk('public')->path('pdfs'),
                 Storage::disk('public')->path('capturas')
@@ -36,6 +36,8 @@ class Horariobuscar extends Component
 
             // Ejecutar el comando usando shell_exec
             $result = shell_exec($command);
+
+            // Capturar salida
             dd($result);
             // Verificar si la ejecución fue exitosa
             if ($result === null) {
