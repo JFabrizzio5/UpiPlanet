@@ -21,6 +21,7 @@ class Horariobuscar extends Component
 
     public function buscar()
     {
+
         $this->validate();
         $this->resetResults();
         $this->isLoading = true;
@@ -53,12 +54,14 @@ class Horariobuscar extends Component
 
     private function resetResults()
     {
+        dd("holaaa");
         $this->capturas = [];
         $this->pdfUrl = null;
         $this->error = null;
     }
     public function render()
     {
+        dd("holaaa");
         return view('livewire.horariobuscar');
     }
 }
