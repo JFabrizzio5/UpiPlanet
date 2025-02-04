@@ -19,13 +19,13 @@
     @error('error')
         <div class="mt-3 alert alert-danger">{{ $message }}</div>
     @enderror
-
-    @foreach ($capturas as $captura)
-        <div class="flex-shrink-0">
-            <img src="{{ Storage::disk('public')->url($captura) }}"
-                class="object-contain w-auto h-48 border-2 border-gray-300 rounded-lg" alt="Captura">
-        </div>
-    @endforeach
+    <div class="flex flex-col mt-4 space-y-4 overflow-auto">
+        @foreach ($capturas as $captura)
+            <div class="flex-shrink-0">
+                <img src="{{ Storage::disk('public')->url($captura) }}" class="img-fluid" alt="Captura">
+            </div>
+        @endforeach
+    </div>
 
     <div class="mt-3">
         <span class="text-xl font-semibold text-gray-700">Resultados:</span>
@@ -40,7 +40,12 @@
         </div>
     </div>
 
-
+    <div class="mt-4">
+        <button
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">
+            Descargar PDF
+        </button>
+    </div>
     @if (empty($capturas) && !$isLoading)
         <div class="mt-3 alert alert-warning">No se encontraron resultados.</div>
     @endif
