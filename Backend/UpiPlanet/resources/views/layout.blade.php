@@ -126,7 +126,9 @@
 
     {{-- Contenido principal --}}
     <main class="container px-6 py-8 mx-auto">
+        @livewireScripts
         @yield('content')
+        @livewireStyles
     </main>
 
     {{-- Scripts adicionales --}}
@@ -136,7 +138,7 @@
 </body>
 
 <footer class="m-4 bg-white rounded-lg shadow-sm dark:bg-gray-900">
-    <<div class="w-full max-w-screen-xl p-4 mx-auto md:py-8">
+    <div class="w-full max-w-screen-xl p-4 mx-auto md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
             <a href="https://flowbite.com/" class="flex items-center mb-4 space-x-3 sm:mb-0 rtl:space-x-reverse">
                 <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
@@ -153,7 +155,7 @@
         <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
         </span>
-        </div>
+    </div>
 </footer>
 
 </html>
