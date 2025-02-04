@@ -5,7 +5,9 @@
                 required>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block" wire:loading.attr="disabled">
+        <button type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            type="submit" wire:loading.attr="disabled">
             <span wire:loading.remove>Buscar y Capturar</span>
             <span wire:loading>
                 <span class="spinner-border spinner-border-sm" role="status"></span>
@@ -31,7 +33,7 @@
             @foreach ($capturas as $captura)
                 <div class="flex-shrink-0">
                     <img src="{{ Storage::disk('public')->url($captura) }}"
-                        class="object-contain w-auto h-48 border-2 border-gray-300 rounded-lg" alt="Captura">
+                        class="object-contain w-auto h-48 border-2 border-gray-300 rounded-lg img-fluid" alt="Captura">
                 </div>
             @endforeach
 
