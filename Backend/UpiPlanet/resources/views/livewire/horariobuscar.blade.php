@@ -19,7 +19,6 @@
     @enderror
 
     @foreach ($capturas as $captura)
-        @dd(Storage::disk('public')->url($captura))
         <div class="flex-shrink-0">
             <img src="{{ Storage::disk('public')->url($captura) }}"
                 class="object-contain w-auto h-48 border-2 border-gray-300 rounded-lg" alt="Captura">
