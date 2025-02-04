@@ -27,6 +27,14 @@ class Horariobuscar extends Component
         $pdfDir = Storage::disk('public')->path('pdfs');
         $capturasDir = Storage::disk('public')->path('capturas');
 
+        // Verificar y crear directorios si no existen
+        if (!is_dir($pdfDir)) {
+            mkdir($pdfDir, 0775, true);  // Crear pdfs
+        }
+        if (!is_dir($capturasDir)) {
+            mkdir($capturasDir, 0775, true);  // Crear capturas
+        }
+
         // Imprimir las rutas y comprobar si existen los archivos
         dd([
             'script_path' => base_path('app/Http/Controllers/PythonControllers/GeneradorDePDF.py'),
