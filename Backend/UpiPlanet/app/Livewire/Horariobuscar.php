@@ -23,6 +23,21 @@ class Horariobuscar extends Component
         $this->resetResults();
         $this->isLoading = true;
 
+        // Imprimir las rutas para depuración
+        $pdfDir = Storage::disk('public')->path('pdfs');
+        $capturasDir = Storage::disk('public')->path('capturas');
+
+        // Imprimir las rutas y comprobar si existen los archivos
+        dd([
+            'script_path' => base_path('app/Http/Controllers/PythonControllers/GeneradorDePDF.py'),
+            'pdf_directory' => $pdfDir,
+            'capturas_directory' => $capturasDir,
+            'venv_path' => base_path('app/Http/Controllers/PythonControllers/venv/bin/python3'),
+            'exists_script' => file_exists(base_path('app/Http/Controllers/PythonControllers/GeneradorDePDF.py')),
+            'exists_pdf' => file_exists($pdfDir . '/horarios_periodo_2025_1.pdf'),
+            'exists_capturas' => is_dir($capturasDir)
+        ]);
+
         try {
             // Comando para ejecutar el script en el entorno virtual
             $command = sprintf(
