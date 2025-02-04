@@ -35,9 +35,18 @@
                         class="object-contain w-auto h-48 border-2 border-gray-300 rounded-lg" alt="Captura">
                 </div>
             @endforeach
+
+            <h1></h1>a</h1>
+            @foreach ($capturas as $captura)
+                <tr>
+                    <td>
+                        <img src="{{ Storage::disk('public')->url($captura) }}" class="img-fluid" alt="Captura">
+                    </td>
+                </tr>
+            @endforeach
         </div>
     </div>
-    @endif
+
 
     @if (empty($capturas) && !$isLoading)
         <div class="mt-3 alert alert-warning">No se encontraron resultados.</div>
