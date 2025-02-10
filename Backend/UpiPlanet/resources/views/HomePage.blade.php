@@ -176,7 +176,7 @@
 
             <!-- Plan Business -->
             <div class="w-full max-w-sm p-6 text-center bg-gray-900 rounded-lg shadow-md">
-                <h5 class="mb-4 text-xl font-medium text-white">Business plan</h5>
+                <h5 class="mb-4 text-xl font-medium text-white">Meteor plan</h5>
                 <div class="flex items-baseline justify-center text-white">
                     <span class="text-3xl font-semibold">$</span>
                     <span class="text-5xl font-extrabold">100</span>
@@ -200,7 +200,7 @@
 
             <!-- Plan Enterprise -->
             <div class="w-full max-w-sm p-6 text-center bg-gray-900 rounded-lg shadow-md">
-                <h5 class="mb-4 text-xl font-medium text-white">Enterprise plan</h5>
+                <h5 class="mb-4 text-xl font-medium text-white">Planet plan</h5>
                 <div class="flex items-baseline justify-center text-white">
                     <span class="text-3xl font-semibold">$</span>
                     <span class="text-5xl font-extrabold">200</span>
