@@ -59,7 +59,7 @@
                                     <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                                     <h3
                                         class="absolute top-0 left-0 z-10 p-4 text-2xl font-medium text-white break-words whitespace-normal xs:text-xl md:text-3xl">
-                                        Herramientas</h3>
+                                        Extras</h3>
                                 </a>
                                 <!-- Contenido Virtual -->
                                 <a href=""
@@ -69,7 +69,7 @@
                                     <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                                     <h3
                                         class="absolute top-0 left-0 z-10 p-4 text-2xl font-medium text-white break-words whitespace-normal xs:text-xl md:text-3xl">
-                                        Contenido virtual</h3>
+                                        Aula</h3>
                                 </a>
                             </div>
                         </div>
