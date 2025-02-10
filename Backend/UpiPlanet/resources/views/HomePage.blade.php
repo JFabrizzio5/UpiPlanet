@@ -70,7 +70,7 @@
                         <div class="flex flex-col h-auto col-span-2 sm:col-span-1 md:col-span-1 md:h-full">
                             <a href=""
                                 class="relative flex flex-col flex-grow px-4 pt-40 pb-4 overflow-hidden rounded-lg group">
-                                <img src="{{ asset('img/MarketPlace.webp') }}" alt=""
+                                <img src="{{ asset('img/MarketPlaceOfertas.webp') }}" alt=""
                                     class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105">
                                 <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                                 <h3
