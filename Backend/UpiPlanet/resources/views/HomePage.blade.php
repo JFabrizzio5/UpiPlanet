@@ -104,24 +104,15 @@
                     </div>
                 </div>
             </section>
-
         </main>
 
-
-
-
-
-
-
-
-
-        <h1 class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Costos y Servicios</h1>
+        <h1 class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Informacion</h1>
         <div class="max-w-6xl px-4 py-8 mx-auto">
             <div
                 class="relative p-8 overflow-hidden text-white shadow-2xl bg-gradient-to-r from-gray-800 to-gray-600 rounded-xl">
                 <div class="absolute top-0 left-0 w-full h-full transform -skew-x-12 bg-white opacity-10"></div>
                 <div class="relative z-10">
-                    <svg class="w-12 h-12 mr-4 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-12 h-12 mr-4 text-white-600" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
@@ -153,6 +144,92 @@
 
 
 
+        </div>
+
+
+        <h1 class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Precios</h1>
+        <!-- Sección de Planes -->
+        <div class="flex flex-col items-center justify-center w-full px-4 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+            <!-- Plan Starter -->
+            <div class="w-full max-w-sm p-6 text-center bg-gray-900 rounded-lg shadow-md">
+                <h5 class="mb-4 text-xl font-medium text-white">Starter plan</h5>
+                <div class="flex items-baseline justify-center text-white">
+                    <span class="text-3xl font-semibold">$</span>
+                    <span class="text-5xl font-extrabold">50</span>
+                    <span class="text-xl font-normal text-gray-400 ms-1">/mxn mes</span>
+                </div>
+                <ul class="my-6 space-y-3 text-white">
+                    <li class="flex items-center">
+                        ✅ 25 tareas automáticas mensuales
+                    </li>
+                    <li class="flex items-center">
+                        ❌ Resúmenes de apuntes y notas
+                    </li>
+                    <li class="flex items-center">
+                        ❌ Acceso especial a ofertas de trabajo
+                    </li>
+                </ul>
+                <button class="w-full py-2 font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+                    Próximamente
+                </button>
+            </div>
+
+            <!-- Plan Business -->
+            <div class="w-full max-w-sm p-6 text-center bg-gray-900 rounded-lg shadow-md">
+                <h5 class="mb-4 text-xl font-medium text-white">Business plan</h5>
+                <div class="flex items-baseline justify-center text-white">
+                    <span class="text-3xl font-semibold">$</span>
+                    <span class="text-5xl font-extrabold">100</span>
+                    <span class="text-xl font-normal text-gray-400 ms-1">/mxn mes</span>
+                </div>
+                <ul class="my-6 space-y-3 text-white">
+                    <li class="flex items-center">
+                        ✅ 100 tareas automáticas mensuales
+                    </li>
+                    <li class="flex items-center">
+                        ✅ 20 resúmenes de notas
+                    </li>
+                    <li class="flex items-center">
+                        ❌ Acceso especial a ofertas de trabajo
+                    </li>
+                </ul>
+                <button class="w-full py-2 font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+                    Próximamente
+                </button>
+            </div>
+
+            <!-- Plan Enterprise -->
+            <div class="w-full max-w-sm p-6 text-center bg-gray-900 rounded-lg shadow-md">
+                <h5 class="mb-4 text-xl font-medium text-white">Enterprise plan</h5>
+                <div class="flex items-baseline justify-center text-white">
+                    <span class="text-3xl font-semibold">$</span>
+                    <span class="text-5xl font-extrabold">200</span>
+                    <span class="text-xl font-normal text-gray-400 ms-1">/mxn mes</span>
+                </div>
+                <ul class="my-6 space-y-3 text-white">
+                    <li class="flex items-center">
+                        ✅ 200 tareas automáticas mensuales
+                    </li>
+                    <li class="flex items-center">
+                        ✅ Resúmenes de apuntes y notas ilimitados
+                    </li>
+                    <li class="flex items-center">
+                        ✅ Acceso especial a ofertas de trabajo
+                    </li>
+                </ul>
+                <button class="w-full py-2 font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+                    Próximamente
+                </button>
+            </div>
+        </div>
+
+
+
+
+        <br>
+
+        <h1 class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Servicios personales</h1>
+
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
             <div class="p-6 transition-all duration-300 transform bg-white shadow-lg dark:bg-gray-800 rounded-xl hover:scale-105 animate-fade-in"
@@ -163,7 +240,8 @@
                         d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <h2 class="mb-2 text-xl font-semibold text-indigo-800 dark:text-white">Web Development</h2>
-                <p class="text-gray-600 dark:text-gray-300">Llevo 4 años de experiencia y puedo desarrollar una web a tu
+                <p class="text-gray-600 dark:text-gray-300">Llevo 4 años de experiencia y puedo desarrollar una web a
+                    tu
                     medida con Python PHP Vue y cualquier solucion que necesites.</p>
             </div>
 
@@ -175,7 +253,9 @@
                         d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
                 <h2 class="mb-2 text-xl font-semibold text-indigo-800 dark:text-white">Mobile App Development</h2>
-                <p class="text-gray-600 dark:text-gray-300">Tengo experiencias con desarrollo mobile ya sea con kotlin o con
+                <p class="text-gray-600 dark:text-gray-300">Tengo experiencias con desarrollo mobile ya sea con kotlin
+                    o
+                    con
                     desarrollo java y puedo desarrollar tus aplicaciones nativas.</p>
             </div>
 
@@ -202,7 +282,8 @@
                         d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
                 </svg>
                 <h2 class="mb-2 text-xl font-semibold text-indigo-800 dark:text-white">AI & Machine Learning</h2>
-                <p class="text-gray-600 dark:text-gray-300">Puedo ayudarte a integrar aplicaciones de ia y incluso cosas
+                <p class="text-gray-600 dark:text-gray-300">Puedo ayudarte a integrar aplicaciones de ia y incluso
+                    cosas
                     con python con opencv o tensorflow para proyectos mas complejos y de machine learning.</p>
             </div>
         </div>
