@@ -33,7 +33,7 @@
                                 <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                                 <h3
                                     class="absolute top-0 left-0 z-10 p-4 text-2xl font-medium text-white xs:text-xl md:text-3xl">
-                                    Horario</h3>
+                                    Horario y Calendario</h3>
                             </a>
                         </div>
                         <div class="col-span-2 text-indigo-800 sm:col-span-1 md:col-span-2">
