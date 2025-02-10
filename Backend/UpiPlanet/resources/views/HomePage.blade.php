@@ -20,7 +20,7 @@
 
 
         <main class="container px-6 py-8 mx-auto">
-            <h1 class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Bienvenido</h1>
+            <h1 class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Bienvenido </h1>
             <section class=" transparent-section">
 
                 <div class="max-w-screen-xl px-2 py-4 mx-auto sm:py-4 lg:px-6">
@@ -49,13 +49,12 @@
                             <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-2">
                                 <a href=""
                                     class="relative flex flex-col px-4 pt-40 pb-4 overflow-hidden rounded-lg group">
-                                    <img src="https://images.unsplash.com/photo-1571104508999-893933ded431?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                        alt=""
+                                    <img src="{{ asset('img/Herramientas.webp') }}" alt=""
                                         class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105">
                                     <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                                     <h3
                                         class="absolute top-0 left-0 z-10 p-4 text-2xl font-medium text-white xs:text-xl md:text-3xl">
-                                        Whiskey</h3>
+                                        Herramientas</h3>
                                 </a>
                                 <a href=""
                                     class="relative flex flex-col px-4 pt-40 pb-4 overflow-hidden rounded-lg group">
