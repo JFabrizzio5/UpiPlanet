@@ -20,6 +20,10 @@
         <div class="mt-3 alert alert-danger">{{ $message }}</div>
     @enderror
     <div class="mt-4 overflow-auto">
+
+        @php
+            $capturas = collect($capturas);
+        @endphp
         @if ($capturas->count() > 0)
             <table class="min-w-full table-auto">
                 <thead>

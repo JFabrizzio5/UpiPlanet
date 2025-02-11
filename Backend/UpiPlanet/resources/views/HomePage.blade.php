@@ -389,6 +389,18 @@
             .animate-fade-in {
                 animation: fadeIn 0.5s ease-out forwards;
             }
+
+            #default-modal {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 50;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         </style>
 
         <script>
