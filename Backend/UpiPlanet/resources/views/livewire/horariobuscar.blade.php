@@ -1,5 +1,5 @@
 <div>
-    @section('title', 'Horario')
+
 
     <form wire:submit.prevent="buscar" class="p-4 space-y-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <div class="relative">
