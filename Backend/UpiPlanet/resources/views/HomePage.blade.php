@@ -52,7 +52,7 @@
                             </a>
                             <div class="grid grid-cols-2 gap-4">
                                 <!-- Herramientas -->
-                                <a data-modal-target="default-modal" data-modal-toggle="default-modal"
+                                <a data-modal-target="extensionModal" data-modal-toggle="extensionModal"
                                     class="relative flex flex-col px-4 pt-40 pb-4 overflow-hidden rounded-lg group">
                                     <img src="{{ asset('img/Herramientas.webp') }}" alt=""
                                         class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105">
@@ -431,5 +431,37 @@
         </div>
     </div>
 
+    <div id="extensionModal" tabindex="-1" aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 flex items-center justify-center hidden w-full h-full bg-gray-900 bg-opacity-50">
+        <div class="bg-white rounded-lg shadow-lg w-96">
+            <div class="flex items-center justify-between p-4 border-b">
+                <h3 class="text-lg font-semibold">Extensiones SAES</h3>
+                <button data-modal-hide="extensionModal" class="text-gray-600 hover:text-gray-900">&times;</button>
+            </div>
+            <div class="p-4 space-y-4">
+                <div class="flex items-center space-x-4">
+                    <img src="https://lh3.googleusercontent.com/0nuKWphiOBCizJ5KV-GuFTDT8UK27YqzA8cq_jpivCLOy4JQz4-w8tms3VLgTh6eAsG3U5GuG457NscRcppLvITugQ=s60"
+                        alt="ModSaes Open" class="w-12 h-12 rounded">
+                    <div>
+                        <h4 class="font-medium text-md">ModSaes Open</h4>
+                        <p class="text-sm text-gray-600">Extensión que mejora la experiencia en SAES con nuevas funciones y
+                            optimizaciones.</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <img src="https://lh3.googleusercontent.com/psfFbofRbbQQNTYIYC0-Dyb5YvCVXsD_ob8p-jd7nUjIN4WJz4HVeHk6Wmsvh7gPdAC3LSAFm3sR7qQJFdXN5jo7OezA=s60"
+                        alt="SAES Fill-Form" class="w-12 h-12 rounded">
+                    <div>
+                        <h4 class="font-medium text-md">SAES Fill-Form</h4>
+                        <p class="text-sm text-gray-600">Extensión que automatiza la evaluación de profesores en SAES.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end p-4 border-t">
+                <button data-modal-hide="extensionModal"
+                    class="px-4 py-2 text-gray-800 bg-gray-300 rounded-lg">Cerrar</button>
+            </div>
+        </div>
+    </div>
 
 @endsection
