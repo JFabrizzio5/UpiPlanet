@@ -152,15 +152,21 @@
         <div class="flex flex-col items-center justify-center w-full px-4 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <!-- Plan Starter -->
             <div class="w-full max-w-sm p-6 text-center bg-gray-900 rounded-lg shadow-md">
-                <h5 class="mb-4 text-xl font-medium text-white">Starter plan</h5>
+                <h5 class="mb-4 text-xl font-medium text-white">Starter plan ✨</h5>
                 <div class="flex items-baseline justify-center text-white">
                     <span class="text-3xl font-semibold">$</span>
-                    <span class="text-5xl font-extrabold">50</span>
-                    <span class="text-xl font-normal text-gray-400 ms-1">/mxn mes</span>
+                    <span class="text-5xl font-extrabold">49</span>
+                    <span class="text-xl font-normal text-gray-400 ms-1">.99/mxn mes</span>
                 </div>
                 <ul class="my-6 space-y-3 text-white">
                     <li class="flex items-center">
                         ✅ 25 tareas automáticas mensuales
+                    </li>
+                    <li class="flex items-center">
+                        ❌ Resumenes de notas
+                    </li>
+                    <li class="flex items-center">
+                        ❌ Acceso a cursos y aulas virtuales Exclusivas
                     </li>
                     <li class="flex items-center">
                         ❌ Resúmenes de apuntes y notas
@@ -176,11 +182,11 @@
 
             <!-- Plan Business -->
             <div class="w-full max-w-sm p-6 text-center bg-gray-900 rounded-lg shadow-md">
-                <h5 class="mb-4 text-xl font-medium text-white">Meteor plan</h5>
+                <h5 class="mb-4 text-xl font-medium text-white">Meteor plan ☄️</h5>
                 <div class="flex items-baseline justify-center text-white">
                     <span class="text-3xl font-semibold">$</span>
-                    <span class="text-5xl font-extrabold">100</span>
-                    <span class="text-xl font-normal text-gray-400 ms-1">/mxn mes</span>
+                    <span class="text-5xl font-extrabold">99</span>
+                    <span class="text-xl font-normal text-gray-400 ms-1">.99/mxn mes</span>
                 </div>
                 <ul class="my-6 space-y-3 text-white">
                     <li class="flex items-center">
@@ -190,7 +196,16 @@
                         ✅ 20 resúmenes de notas
                     </li>
                     <li class="flex items-center">
+                        ✅ Creacion de catalogo
+                    </li>
+                    <li class="flex items-center">
+                        ❌ Acceso a cursos y aulas virtuales Exclusivas
+                    </li>
+                    <li class="flex items-center">
                         ❌ Acceso especial a ofertas de trabajo
+                    </li>
+                    <li class="flex items-center">
+                        ❌ Pagina web para vender productos
                     </li>
                 </ul>
                 <button class="w-full py-2 font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
@@ -200,11 +215,11 @@
 
             <!-- Plan Enterprise -->
             <div class="w-full max-w-sm p-6 text-center bg-gray-900 rounded-lg shadow-md">
-                <h5 class="mb-4 text-xl font-medium text-white">Planet plan</h5>
+                <h5 class="mb-4 text-xl font-medium text-white">Planet plan 🪐</h5>
                 <div class="flex items-baseline justify-center text-white">
                     <span class="text-3xl font-semibold">$</span>
-                    <span class="text-5xl font-extrabold">200</span>
-                    <span class="text-xl font-normal text-gray-400 ms-1">/mxn mes</span>
+                    <span class="text-5xl font-extrabold">199</span>
+                    <span class="text-xl font-normal text-gray-400 ms-1">.99/mxn mes</span>
                 </div>
                 <ul class="my-6 space-y-3 text-white">
                     <li class="flex items-center">
@@ -216,6 +231,21 @@
                     <li class="flex items-center">
                         ✅ Acceso especial a ofertas de trabajo
                     </li>
+                    <li class="flex items-center">
+                        ✅ Acceso a cursos y aulas virtuales Exclusivas
+                    </li>
+
+                    <li class="flex items-center">
+                        ✅ Creacion de catalogo
+                    </li>
+
+                    <li class="flex items-center">
+                        ✅ Pagina web para vender productos
+                    </li>
+                    <li class="flex items-center">
+                        ✅ Beneficios extra
+                    </li>
+
                 </ul>
                 <button class="w-full py-2 font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
                     Próximamente
