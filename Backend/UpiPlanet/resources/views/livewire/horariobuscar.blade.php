@@ -23,12 +23,13 @@
             </span>
         </button>
         <!-- Botón para abrir el modal -->
+        <br>
         <a href="https://www.ipn.mx/assets/files/website/docs/inicio/calendarioipn-escolarizada.pdf" target="_blank"
-            rel="noopener noreferrer">
-            <button data-modal-target="pdfModal" data-modal-toggle="pdfModal"
-                class="w-full flex items-center justify-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
-                <span>Ver Calendario IPN</span>
-            </button>
+            rel="noopener noreferrer"
+            class="w-full flex items-center justify-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+
+            <span>Ver Calendario IPN</span>
+
         </a>
 
 
