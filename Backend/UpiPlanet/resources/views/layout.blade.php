@@ -66,16 +66,15 @@
                     </div>
                     <ul class="py-2" aria-labelledby="user-menu-button">
                         <li>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Enviar
-                                Correo</a>
+                            <a href="https://www.facebook.com/profile.php?id=61554488804526"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Facebook</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="https://github.com/JFabrizzio5"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Github</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="https://www.linkedin.com/in/joseph-fabrizzio-hernandez-gonzalez-045b91270/"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Linkedin</a>
                         </li>
                         <li>
