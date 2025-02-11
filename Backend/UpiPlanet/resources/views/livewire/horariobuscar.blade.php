@@ -71,7 +71,7 @@
             <tbody>
                 @foreach ($capturas as $captura)
                     <tr class="border-t border-gray-300 dark:border-gray-600">
-                        <td colspan="19" class="p-3 text-center">
+                        <td colspan="25" class="p-3 text-center">
                             <img src="{{ Storage::disk('public')->url($captura) }}"
                                 class="h-auto max-w-full rounded-lg shadow-lg" alt="Captura">
                         </td>
