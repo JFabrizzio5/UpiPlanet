@@ -446,7 +446,7 @@
                     <div>
                         <h4 class="font-medium text-md">ModSaes Open</h4>
                         <p class="text-sm text-gray-600">Extensión que mejora la experiencia en SAES con nuevas funciones y
-                            optimizaciones.</p>
+                            optimizaciones asi como creacion de horarios.</p>
                     </div>
                 </div>
 
