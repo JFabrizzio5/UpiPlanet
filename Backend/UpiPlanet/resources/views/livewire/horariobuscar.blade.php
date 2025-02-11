@@ -1,82 +1,81 @@
 <div>
-    <form wire:submit.prevent="buscar">
-        <div class="form-group">
-            <input type="text" class="form-control" wire:model="texto" placeholder="Ingrese el texto a buscar..."
+    <form wire:submit.prevent="buscar" class="p-4 space-y-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <div class="relative">
+            <input type="text" wire:model="texto" placeholder="Ingrese el texto a buscar..."
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:ring-blue-400"
                 required>
         </div>
 
         <button type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            class="w-full flex items-center justify-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800"
             wire:loading.attr="disabled">
             <span wire:loading.remove>Buscar y Capturar</span>
-            <span wire:loading>
-                <span class="spinner-border spinner-border-sm" role="status"></span>
+            <span wire:loading class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                        stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0116 0H4z"></path>
+                </svg>
                 Procesando...
             </span>
         </button>
     </form>
 
     @error('error')
-        <div class="mt-3 alert alert-danger">{{ $message }}</div>
+        <div class="p-3 mt-3 text-red-700 bg-red-100 border border-red-400 rounded-lg dark:bg-red-900 dark:text-red-200">
+            {{ $message }}</div>
     @enderror
-    <div class="flex flex-col mt-4 space-y-4 overflow-auto">
-        <table class="w-full text-white bg-black border border-collapse border-gray-700 table-auto">
-            <thead>
-                <tr>
-                    <th>ESTRUCTURA</th>
-                    <th>PROGRAMA ACADEMICO</th>
-                    <th>PLAN ESTD</th>
-                    <th>TURNO</th>
-                    <th>SECUENCIA</th>
-                    <th>UNIDAD DE APRENDIZAJE</th>
-                    <th>ACADEMIA</th>
-                    <th>DOCENTE</th>
-                    <th>LUNES</th>
-                    <th>SALÓN LUNES</th>
-                    <th>MARTES</th>
-                    <th>SALÓN MARTES</th>
-                    <th>MIÉRCOLES</th>
-                    <th>SALÓN MIÉRCOLES</th>
-                    <th>JUEVES</th>
-                    <th>SALÓN JUEVES</th>
-                    <th>VIERNES</th>
-                    <th>SALÓN VIERNES</th>
-                    <th>EDIFICIO</th>
+
+    <div class="mt-6 overflow-x-auto">
+        <table
+            class="w-full text-gray-800 bg-white border border-gray-300 rounded-lg dark:text-white dark:border-gray-700 dark:bg-gray-800">
+            <thead class="bg-gray-200 dark:bg-gray-700">
+                <tr class="text-sm font-semibold text-left text-gray-600 dark:text-gray-300">
+                    <th class="p-2">ESTRUCTURA</th>
+                    <th class="p-2">PROGRAMA ACADEMICO</th>
+                    <th class="p-2">PLAN ESTD</th>
+                    <th class="p-2">TURNO</th>
+                    <th class="p-2">SECUENCIA</th>
+                    <th class="p-2">UNIDAD DE APRENDIZAJE</th>
+                    <th class="p-2">ACADEMIA</th>
+                    <th class="p-2">DOCENTE</th>
+                    <th class="p-2">LUNES</th>
+                    <th class="p-2">SALÓN LUNES</th>
+                    <th class="p-2">MARTES</th>
+                    <th class="p-2">SALÓN MARTES</th>
+                    <th class="p-2">MIÉRCOLES</th>
+                    <th class="p-2">SALÓN MIÉRCOLES</th>
+                    <th class="p-2">JUEVES</th>
+                    <th class="p-2">SALÓN JUEVES</th>
+                    <th class="p-2">VIERNES</th>
+                    <th class="p-2">SALÓN VIERNES</th>
+                    <th class="p-2">EDIFICIO</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($capturas as $captura)
-                    <tr>
-                        <td colspan="19">
-                            <img src="{{ Storage::disk('public')->url($captura) }}" class="img-fluid" alt="Captura">
+                    <tr class="border-t border-gray-300 dark:border-gray-600">
+                        <td colspan="19" class="p-3 text-center">
+                            <img src="{{ Storage::disk('public')->url($captura) }}"
+                                class="h-auto max-w-full rounded-lg shadow-lg" alt="Captura">
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-        <button wire:click="downloadPdf"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">
-            Descargar PDF
-        </button>
     </div>
 
-    {{-- <div class="mt-3">
-        <span class="text-xl font-semibold text-gray-700">Resultados:</span>
-        <div class="flex mt-4 space-x-4 overflow-auto">
-            @foreach ($capturas as $captura)
-                <div class="flex-shrink-0">
-                    <img src="{{ Storage::disk('public')->url($captura) }}" class="img-fluid" alt="Captura">
-                </div>
-            @endforeach
+    <button wire:click="downloadPdf"
+        class="mt-4 w-full text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-800">
+        Descargar PDF
+    </button>
 
-
-        </div>
-    </div> --}}
-
-    <div class="mt-4">
-
-    </div>
     @if (empty($capturas) && !$isLoading)
-        <div class="mt-3 alert alert-warning">No se encontraron resultados.</div>
+        <div
+            class="p-3 mt-3 text-yellow-700 bg-yellow-100 border border-yellow-400 rounded-lg dark:bg-yellow-900 dark:text-yellow-200">
+            No se encontraron resultados.
+        </div>
     @endif
+
 </div>
