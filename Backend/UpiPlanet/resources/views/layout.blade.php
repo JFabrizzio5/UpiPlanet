@@ -8,7 +8,7 @@
 
     {{-- Vite para estilos y scripts --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    <link rel="icon" href="{{ asset('img/Fondo.webp') }}" type="image/x-icon">
     {{-- CDN de Tailwind para pruebas rápidas (quitar si usas Vite completamente) --}}
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -147,10 +147,12 @@
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">UpiPlanet</span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li><a href="#" class="hover:underline me-4 md:me-6">Servicios</a></li>
-                <li><a href="#" class="hover:underline me-4 md:me-6">Github</a></li>
-                <li><a href="#" class="hover:underline me-4 md:me-6">Linkedin</a></li>
-                <li><a href="#" class="hover:underline">Contacto</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61554488804526"
+                        class="hover:underline me-4 md:me-6">Servicios</a></li>
+                <li><a href="https://github.com/JFabrizzio5" class="hover:underline me-4 md:me-6">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/joseph-fabrizzio-hernandez-gonzalez-045b91270/"
+                        class="hover:underline me-4 md:me-6">Linkedin</a></li>
+                <li><a href="#" class="hover:underline">Contacto: Josephfabrizziocorreo@gmail.com</a></li>
             </ul>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
