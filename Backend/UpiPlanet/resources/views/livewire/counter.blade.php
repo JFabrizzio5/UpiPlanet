@@ -23,7 +23,7 @@
                         class="w-12 h-12 mr-4 border-2 border-black rounded-full">
                     <div>
                         <h4 class="font-semibold">Joseph Fabrizzio</h4>
-                        <p class="text-black">CEO</p>
+                        <p class="text-black">Creador Fullstack UpiPlanet</p>
                     </div>
                 </div>
             </div>
