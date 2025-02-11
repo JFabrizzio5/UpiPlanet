@@ -60,7 +60,7 @@
         </button>
     </div>
 
-    <div class="mt-3">
+    {{-- <div class="mt-3">
         <span class="text-xl font-semibold text-gray-700">Resultados:</span>
         <div class="flex mt-4 space-x-4 overflow-auto">
             @foreach ($capturas as $captura)
@@ -71,7 +71,7 @@
 
 
         </div>
-    </div>
+    </div> --}}
 
     <div class="mt-4">
 
