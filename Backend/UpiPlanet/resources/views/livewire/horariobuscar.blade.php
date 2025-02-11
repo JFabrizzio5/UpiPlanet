@@ -1,4 +1,6 @@
 <div>
+    @section('title', 'Horario')
+
     <form wire:submit.prevent="buscar" class="p-4 space-y-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <div class="relative">
             <input type="text" wire:model="texto" placeholder="Ingrese el texto a buscar..."
@@ -74,7 +76,7 @@
     @if (empty($capturas) && !$isLoading)
         <div
             class="p-3 mt-3 text-yellow-700 bg-yellow-100 border border-yellow-400 rounded-lg dark:bg-yellow-900 dark:text-yellow-200">
-            No se encontraron resultados.
+            Sin Resultados.
         </div>
     @endif
 
