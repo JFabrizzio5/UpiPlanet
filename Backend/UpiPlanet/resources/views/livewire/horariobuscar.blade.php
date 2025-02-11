@@ -23,39 +23,19 @@
             </span>
         </button>
         <!-- Botón para abrir el modal -->
+        <a href="https://www.ipn.mx/assets/files/website/docs/inicio/calendarioipn-escolarizada.pdf" target="_blank"
+            rel="noopener noreferrer">
+            <button data-modal-target="pdfModal" data-modal-toggle="pdfModal"
+                class="w-full flex items-center justify-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+                <span>Ver Calendario IPN</span>
+            </button>
+        </a>
 
 
         <!-- Script de Flowbite (Asegúrate de incluirlo si no lo tienes) -->
 
     </form>
-    <button data-modal-target="pdfModal" data-modal-toggle="pdfModal"
-        class="w-full flex items-center justify-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
-        <span>Ver Calendario IPN</span>
-    </button>
 
-    <!-- Modal -->
-    <div id="pdfModal" tabindex="-1" aria-hidden="true"
-        class="fixed inset-0 flex items-center justify-center hidden bg-black bg-opacity-50">
-        <div class="relative w-full max-w-4xl bg-white rounded-lg shadow-lg">
-            <!-- Encabezado del modal -->
-            <div class="flex items-center justify-between p-4 border-b">
-                <h3 class="text-lg font-semibold">Documento PDF</h3>
-                <button type="button" class="text-gray-400 hover:text-gray-600" data-modal-hide="pdfModal">
-                    ✕
-                </button>
-            </div>
-            <!-- Contenido del modal con PDF embebido -->
-            <div class="p-4">
-                <iframe src="https://www.ipn.mx/assets/files/website/docs/inicio/calendarioipn-escolarizada.pdf"
-                    class="w-full h-[500px]"></iframe>
-            </div>
-            <!-- Footer del modal -->
-            <div class="flex justify-end p-4 border-t">
-                <button data-modal-hide="pdfModal"
-                    class="px-4 py-2 text-white bg-gray-600 rounded-lg hover:bg-gray-700">Cerrar</button>
-            </div>
-        </div>
-    </div>
     @error('error')
         <div class="p-3 mt-3 text-red-700 bg-red-100 border border-red-400 rounded-lg dark:bg-red-900 dark:text-red-200">
             {{ $message }}</div>
