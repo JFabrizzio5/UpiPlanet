@@ -154,7 +154,7 @@
         </div>
 
 
-        <h1 class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Precios</h1>
+        <h1 id="precios" class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Precios</h1>
         <!-- Sección de Planes -->
         <div class="flex flex-col items-center justify-center w-full px-4 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <!-- Plan Starter -->
@@ -265,7 +265,8 @@
 
         <br>
 
-        <h1 class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Servicios personales</h1>
+        <h1 id="servicios" class="mb-12 text-4xl font-bold text-center text-white animate-fade-in">Servicios personales
+        </h1>
 
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
