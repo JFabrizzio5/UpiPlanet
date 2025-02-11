@@ -27,7 +27,7 @@
                         <!-- Horario y Calendario -->
                         <div
                             class="flex flex-col h-auto col-span-1 text-indigo-800 sm:col-span-2 lg:col-span-2 xl:col-span-2">
-                            <a href=""
+                            <a href="/Horario"
                                 class="relative flex flex-col flex-grow px-4 pt-40 pb-4 overflow-hidden rounded-lg group">
                                 <img src="{{ asset('img/CalendarioImg.webp') }}" alt=""
                                     class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105">
