@@ -439,7 +439,7 @@
                 <button data-modal-hide="extensionModal" class="text-gray-600 hover:text-gray-900">&times;</button>
             </div>
             <div class="p-4 space-y-4">
-                <div class="flex items-center space-x-4">
+                <div onclick="window.location.href='URL_AQUI'" class="flex items-center space-x-4 cursor-pointer">
                     <img src="https://lh3.googleusercontent.com/0nuKWphiOBCizJ5KV-GuFTDT8UK27YqzA8cq_jpivCLOy4JQz4-w8tms3VLgTh6eAsG3U5GuG457NscRcppLvITugQ=s60"
                         alt="ModSaes Open" class="w-12 h-12 rounded">
                     <div>
@@ -448,14 +448,17 @@
                             optimizaciones.</p>
                     </div>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <img src="https://lh3.googleusercontent.com/psfFbofRbbQQNTYIYC0-Dyb5YvCVXsD_ob8p-jd7nUjIN4WJz4HVeHk6Wmsvh7gPdAC3LSAFm3sR7qQJFdXN5jo7OezA=s60"
+
+                <div onclick="window.location.href='https://chromewebstore.google.com/detail/saes-fill-form/hlgobbbmkdngojnbhcfhnghjlpnkfelb'"
+                    class="flex items-center space-x-4 cursor-pointer">
+                    <img src="https://lh3.googleusercontent.com/psfFbofRbbQQNTYIYC0-Dyb5YvCVXsD_ob8p-jd7nUjIN4WJzHVeHk6Wmsvh7gPdAC3LSAFm3sR7qQJFdXN5jo7OezA=s60"
                         alt="SAES Fill-Form" class="w-12 h-12 rounded">
                     <div>
                         <h4 class="font-medium text-md">SAES Fill-Form</h4>
                         <p class="text-sm text-gray-600">Extensión que automatiza la evaluación de profesores en SAES.</p>
                     </div>
                 </div>
+
             </div>
             <div class="flex justify-end p-4 border-t">
                 <button data-modal-hide="extensionModal"
