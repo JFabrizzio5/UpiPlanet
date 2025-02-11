@@ -24,6 +24,12 @@
             <div class="flex-shrink-0">
                 <img src="{{ Storage::disk('public')->url($captura) }}" class="img-fluid" alt="Captura">
             </div>
+
+
+            <button onclick="descargarPDF('{{ $pdfUrl }}')"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">
+                Descargar PDF
+            </button>
         @endforeach
     </div>
 
@@ -41,10 +47,7 @@
     </div>
 
     <div class="mt-4">
-        <button
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">
-            Descargar PDF
-        </button>
+
     </div>
     @if (empty($capturas) && !$isLoading)
         <div class="mt-3 alert alert-warning">No se encontraron resultados.</div>
