@@ -439,7 +439,8 @@
                 <button data-modal-hide="extensionModal" class="text-gray-600 hover:text-gray-900">&times;</button>
             </div>
             <div class="p-4 space-y-4">
-                <div onclick="window.location.href='URL_AQUI'" class="flex items-center space-x-4 cursor-pointer">
+                <div onclick="window.location.href='https://chromewebstore.google.com/detail/modsaes-open/ciakjkfldggpnfcoggkdmionbpbjmhhj'"
+                    class="flex items-center space-x-4 cursor-pointer">
                     <img src="https://lh3.googleusercontent.com/0nuKWphiOBCizJ5KV-GuFTDT8UK27YqzA8cq_jpivCLOy4JQz4-w8tms3VLgTh6eAsG3U5GuG457NscRcppLvITugQ=s60"
                         alt="ModSaes Open" class="w-12 h-12 rounded">
                     <div>
