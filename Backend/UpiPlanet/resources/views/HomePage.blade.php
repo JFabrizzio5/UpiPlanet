@@ -41,7 +41,7 @@
                         <!-- Mapa -->
                         <div
                             class="flex flex-col h-auto col-span-1 text-indigo-800 sm:col-span-2 lg:col-span-2 xl:col-span-2">
-                            <a data-modal-target="mapa" data-modal-toggle="mapa"
+                            <a data-modal-target="map-modal" data-modal-toggle="map-modal"
                                 class="relative flex flex-col px-4 pt-40 pb-4 mb-4 overflow-hidden rounded-lg group">
                                 <img src="{{ asset('img/UpiMapaFondo.webp') }}" alt=""
                                     class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105">
@@ -400,7 +400,7 @@
 
 
 
-    <div id="Mapa" tabindex="-1" aria-hidden="true"
+    <div id="map-modal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-2xl max-h-full p-4">
             <!-- Modal content -->
@@ -413,7 +413,7 @@
                     </h3>
                     <button type="button"
                         class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 ms-auto dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-hide="Mapa">
+                        data-modal-hide="map-modal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 14 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
