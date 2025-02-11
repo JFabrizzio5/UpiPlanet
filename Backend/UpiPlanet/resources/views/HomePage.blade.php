@@ -243,7 +243,7 @@
                         ✅ Pagina web para vender productos
                     </li>
                     <li class="flex items-center">
-                        ✅ Beneficios extra
+                        ✅ Publicidad gratis y Beneficios extra :D
                     </li>
 
                 </ul>
