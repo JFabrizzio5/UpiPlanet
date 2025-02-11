@@ -105,11 +105,11 @@
                 </div>
             </section>
         </main>
-        <button data-modal-target="default-modal" data-modal-toggle="default-modal"
+        {{-- <button data-modal-target="default-modal" data-modal-toggle="default-modal"
             class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button">
             Toggle modal
-        </button>
+        </button> --}}
 
         <!-- Main text -->
 
@@ -128,7 +128,7 @@
                         tiempo, se irán añadiendo nuevas funcionalidades, siempre que reciba el apoyo necesario y tus ideas.
                         A continuación, te cuento un poco más sobre mis servicios como desarrollador freelance. También
                         puedes contactarme a través de mis redes sociales (GitHub, LinkedIn, etc.) haciendo clic en el
-                        enlace en la parte superior derecha.
+                        enlace en la parte superior derecha en mi foto.
                     </p>
 
                     {{-- <h1>{{ $count }}</h1>
@@ -401,8 +401,8 @@
 
 
     <div id="map-modal" tabindex="-1" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative w-full max-w-2xl max-h-full p-4">
+        class="fixed inset-0 z-50 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
+        <div class="relative w-full max-w-4xl h-[90vh] p-4 overflow-auto">
             <!-- Modal content -->
             <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
                 <!-- Modal header -->
@@ -425,10 +425,11 @@
                 <!-- Modal body -->
                 <div class="p-4 md:p-5">
                     <img src="https://raw.githubusercontent.com/JFabrizzio5/Horarios-2024-2025-upiicsa/main/TuHorarioWeb/static/360168838_955571922479739_2888906129320882497_n.jpg"
-                        alt="Mapa" class="w-full h-auto rounded-lg shadow-md">
+                        alt="Mapa" class="w-full h-auto max-h-[80vh] rounded-lg shadow-md">
                 </div>
             </div>
         </div>
     </div>
+
 
 @endsection
