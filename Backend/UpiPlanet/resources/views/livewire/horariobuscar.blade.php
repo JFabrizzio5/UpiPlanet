@@ -20,7 +20,7 @@
         <div class="mt-3 alert alert-danger">{{ $message }}</div>
     @enderror
     <div class="flex flex-col mt-4 space-y-4 overflow-auto">
-        <table class="table table-bordered">
+        <table class="w-full text-white bg-black border border-collapse border-gray-700 table-auto">
             <thead>
                 <tr>
                     <th>ESTRUCTURA</th>
