@@ -19,18 +19,68 @@
     @error('error')
         <div class="mt-3 alert alert-danger">{{ $message }}</div>
     @enderror
-    <div class="flex flex-col mt-4 space-y-4 overflow-auto">
-        @foreach ($capturas as $captura)
-            <div class="flex-shrink-0">
-                <img src="{{ Storage::disk('public')->url($captura) }}" class="img-fluid" alt="Captura">
-            </div>
-
-
+    <div class="mt-4 overflow-auto">
+        @if ($capturas->count() > 0)
+            <table class="min-w-full table-auto">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2">ESTRUCTURA</th>
+                        <th class="px-4 py-2">PROGRAMA ACADEMICO</th>
+                        <th class="px-4 py-2">PLAN ESTD</th>
+                        <th class="px-4 py-2">TURNO</th>
+                        <th class="px-4 py-2">SECUENCIA</th>
+                        <th class="px-4 py-2">UNIDAD DE APRENDIZAJE</th>
+                        <th class="px-4 py-2">ACADEMIA</th>
+                        <th class="px-4 py-2">DOCENTE</th>
+                        <th class="px-4 py-2">LUNES</th>
+                        <th class="px-4 py-2">SALÓN LUNES</th>
+                        <th class="px-4 py-2">MARTES</th>
+                        <th class="px-4 py-2">SALÓN MARTES</th>
+                        <th class="px-4 py-2">MIÉRCOLES</th>
+                        <th class="px-4 py-2">SALÓN MIÉRCOLES</th>
+                        <th class="px-4 py-2">JUEVES</th>
+                        <th class="px-4 py-2">SALÓN JUEVES</th>
+                        <th class="px-4 py-2">VIERNES</th>
+                        <th class="px-4 py-2">SALÓN VIERNES</th>
+                        <th class="px-4 py-2">EDIFICIO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($capturas as $captura)
+                        <tr>
+                            <td class="px-4 py-2">{{ $captura->estructura }}</td>
+                            <td class="px-4 py-2">{{ $captura->programa_academico }}</td>
+                            <td class="px-4 py-2">{{ $captura->plan_estd }}</td>
+                            <td class="px-4 py-2">{{ $captura->turno }}</td>
+                            <td class="px-4 py-2">{{ $captura->secuencia }}</td>
+                            <td class="px-4 py-2">{{ $captura->unidad_aprendizaje }}</td>
+                            <td class="px-4 py-2">{{ $captura->academia }}</td>
+                            <td class="px-4 py-2">{{ $captura->docente }}</td>
+                            <td class="px-4 py-2">{{ $captura->lunes }}</td>
+                            <td class="px-4 py-2">{{ $captura->salon_lunes }}</td>
+                            <td class="px-4 py-2">{{ $captura->martes }}</td>
+                            <td class="px-4 py-2">{{ $captura->salon_martes }}</td>
+                            <td class="px-4 py-2">{{ $captura->miercoles }}</td>
+                            <td class="px-4 py-2">{{ $captura->salon_miercoles }}</td>
+                            <td class="px-4 py-2">{{ $captura->jueves }}</td>
+                            <td class="px-4 py-2">{{ $captura->salon_jueves }}</td>
+                            <td class="px-4 py-2">{{ $captura->viernes }}</td>
+                            <td class="px-4 py-2">{{ $captura->salon_viernes }}</td>
+                            <td class="px-4 py-2">{{ $captura->edificio }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
             <button wire:click="downloadPdf"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">
                 Descargar PDF
             </button>
-        @endforeach
+        @else
+            <div class="text-center">
+                <p class="font-medium text-red-500">BÚSQUEDA NO VÁLIDA. INTENTA CON MAYÚSCULAS Y REVISANDO TU BÚSQUEDA.
+                </p>
+            </div>
+        @endif
     </div>
 
     <div class="mt-3">
