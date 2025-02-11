@@ -41,7 +41,7 @@
                         <!-- Mapa -->
                         <div
                             class="flex flex-col h-auto col-span-1 text-indigo-800 sm:col-span-2 lg:col-span-2 xl:col-span-2">
-                            <a href=""
+                            <a data-modal-target="mapa" data-modal-toggle="mapa"
                                 class="relative flex flex-col px-4 pt-40 pb-4 mb-4 overflow-hidden rounded-lg group">
                                 <img src="{{ asset('img/UpiMapaFondo.webp') }}" alt=""
                                     class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105">
@@ -52,7 +52,7 @@
                             </a>
                             <div class="grid grid-cols-2 gap-4">
                                 <!-- Herramientas -->
-                                <a href=""
+                                <a data-modal-target="default-modal" data-modal-toggle="default-modal"
                                     class="relative flex flex-col px-4 pt-40 pb-4 overflow-hidden rounded-lg group">
                                     <img src="{{ asset('img/Herramientas.webp') }}" alt=""
                                         class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105">
@@ -62,7 +62,7 @@
                                         Extras</h3>
                                 </a>
                                 <!-- Contenido Virtual -->
-                                <a href=""
+                                <a data-modal-target="default-modal" data-modal-toggle="default-modal"
                                     class="relative flex flex-col px-4 pt-40 pb-4 overflow-hidden rounded-lg group">
                                     <img src="{{ asset('img/Cursos.webp') }}" alt=""
                                         class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105">
@@ -77,7 +77,7 @@
                         <!-- Ofertas Laborales Y MarketPlace -->
                         <div
                             class="flex flex-col h-auto col-span-1 text-indigo-800 sm:col-span-2 lg:col-span-1 xl:col-span-1">
-                            <a href=""
+                            <a data-modal-target="default-modal" data-modal-toggle="default-modal"
                                 class="relative flex flex-col flex-grow px-4 pt-40 pb-4 overflow-hidden rounded-lg group">
                                 <img src="{{ asset('img/MarketPlaceOfertas.webp') }}" alt=""
                                     class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105">
@@ -364,8 +364,8 @@
                 <!-- Modal header -->
                 <div
                     class="flex items-center justify-between p-4 border-b border-gray-200 rounded-t md:p-5 dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Terms of Service
+                    <h3 class="text-xl font-semibold text-white">
+                        Proximamente
                     </h3>
                     <button type="button"
                         class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 ms-auto dark:hover:bg-gray-600 dark:hover:text-white"
@@ -375,31 +375,60 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                         </svg>
-                        <span class="sr-only">Close modal</span>
+                        <span class="sr-only">Cerrar modal</span>
                     </button>
                 </div>
                 <!-- Modal body -->
-                <div class="p-4 space-y-4 md:p-5">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        With less than a month to go before the European Union enacts new consumer privacy laws for its
-                        citizens, companies around the world are updating their terms of service agreements to comply.
-                    </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25
-                        and is meant to ensure a common set of data rights in the European Union. It requires
-                        organizations to notify users as soon as possible of high-risk data breaches that could
-                        personally affect them.
+                <div class="p-4 space-y-4 text-white md:p-5">
+                    <p class="text-base leading-relaxed">
+                        Esta es una versión beta, puedes colaborar contactándome o dando aportes en el GitHub del proyecto
+                        :D
                     </p>
                 </div>
                 <!-- Modal footer -->
                 <div class="flex items-center p-4 border-t border-gray-200 rounded-b md:p-5 dark:border-gray-600">
                     <button data-modal-hide="default-modal" type="button"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
-                        accept</button>
-                    <button data-modal-hide="default-modal" type="button"
-                        class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Acepto
+                    </button>
+
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+    <div id="Mapa" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-2xl max-h-full p-4">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+                <!-- Modal header -->
+                <div
+                    class="flex items-center justify-between p-4 bg-black bg-opacity-50 border-b border-gray-200 rounded-t md:p-5 dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-white">
+                        Mapa
+                    </h3>
+                    <button type="button"
+                        class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 ms-auto dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="Mapa">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Cerrar modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5">
+                    <img src="https://raw.githubusercontent.com/JFabrizzio5/Horarios-2024-2025-upiicsa/main/TuHorarioWeb/static/360168838_955571922479739_2888906129320882497_n.jpg"
+                        alt="Mapa" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </div>
+
 @endsection
