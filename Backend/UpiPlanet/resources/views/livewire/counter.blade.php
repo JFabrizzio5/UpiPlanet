@@ -12,7 +12,8 @@
                 <p class="mb-4 text-xl font-medium">
                     "Ninguna herramienta me gustaba pese a que fuera muy popular siento que no estaba a mi medida asi
                     que decidi
-                    intentar ir al siguiente nivel y la plataforma me encanta la uso diario"</p>
+                    intentar ir al siguiente nivel y crear esta plataforma donde se centralizara informacion y podras
+                    aumentar tu productividad"</p>
                 {{-- <h1>{{ $count }}</h1>
 
                 <button wire:click="increment">+</button>
