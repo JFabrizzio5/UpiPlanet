@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw
 
 def procesar_pdf(texto_busqueda, base_pdf_dir, output_capturas_dir):
     # Configurar paths
-    pdf_path = os.path.join(base_pdf_dir, 'horarios_periodo_2025_1.pdf')
+    pdf_path = os.path.join(base_pdf_dir, 'asignacion-salones-25-2')
     capturas_subdir = os.path.join(output_capturas_dir, texto_busqueda)
     output_pdf_path = os.path.join(base_pdf_dir, f"{texto_busqueda}.pdf")
 
