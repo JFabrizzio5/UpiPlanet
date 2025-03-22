@@ -17,7 +17,7 @@ html to readme To-Do List - UpiPlanet
 *   Crear modelos de usuario y roles (Admin, Instructor, Estudiante)
 *   Desarrollar endpoints para login, registro y recuperación de contraseña
 *   Implementar middleware para proteger rutas según rol
-*   Desarrollar la interfaz de login con Vue.js y Tailwind CSS
+*   Desarrollar la interfaz de login con Vue3.js y Tailwind CSS
 
 📚 Módulo de Cursos
 -------------------
