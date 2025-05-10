@@ -37,3 +37,5 @@ html to readme To-Do List - UpiPlanet
 *   Foro de discusión o chat para estudiantes
 *   Sistema de notificaciones y recordatorios
 *   Pasarela de pagos para cursos premium (Stripe, PayPal)
+
+Nota: Seguir y actualizar el proyecto
